@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./assets/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container" id="login" style="display: none;">
+        <div class="start">
+            <div><label for="name">Name: </label><input name="name" id="name" type="text" /></div>
+            <div>
+                <input id="name" type="submit" value="SCORE HISTORY" class="key"
+                    onclick='document.getElementById("login").style.display = "none"; document.getElementById("score").style.display = "block";' />
+                <input id="loginBtn" type="submit" value="START" class="key startkey"
+                    onclick="document.location = 'main.html'" />
+            </div>
+        </div>
+    </div>
+    <div class="container" id="main" style="display: none;">
+        <div class="info">
+            <div class="name">Omid</div>
+            <div class="time">00:00</div>
+        </div>
+        <div class="buttles">
+        </div>
+    </div>
+    <div class="container" id="score" style="display: none;">
+        <table class="scores">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody id="scores">
+
+            </tbody>
+        </table>
+        <input type="submit" value="BACK" class="key" onclick="window.location.reload()" />
+    </div>
+</body>
+
+<script src="./assets/js/main.js" type="module"></script>
+
+</html>
